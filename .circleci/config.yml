@@ -13,6 +13,7 @@ jobs:
           command: |
             cd frontend
             npm install
+            export API_URL="http://${BACKEND_IP}:3030"
             npm run build:prod
             exit 1
       - save_cache:
